@@ -14,8 +14,34 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    
+    <dependency>
+    	<groupId>com.atlassian.maven.plugins</groupId>
+    	<artifactId>maven-jgitflow-plugin</artifactId>
+    	<version>1.0-alpha21.1</version>
+    </dependency>
+    
   </dependencies>
   <build>
     <finalName>Branching</finalName>
+  	 <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.atlassian.maven.plugins</groupId>
+                    <artifactId>maven-jgitflow-plugin</artifactId>
+                    <version>1.0-alpha21.1</version>
+                    <configuration>
+                        <autoVersionSubmodules>true</autoVersionSubmodules>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
   </build>
+  
+  <scm>
+        <connection>scm:git@github.com/06dhana/Test_Git_Branching.git</connection>
+        <developerConnection>scm:git@github.com/06dhana/Test_Git_Branching.git</developerConnection>
+        <url>scm:git@github.com/06dhana/Test_Git_Branching.git</url>
+    </scm>
+    
 </project>
